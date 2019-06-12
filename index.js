@@ -3,6 +3,7 @@ require('./utilities/getEnv')();
 
 const getToken = require('./utilities/getToken');
 const getFirestore = require('./db/getFirestore');
+const saveAttributes = require('./db/saveAttributes');
 const getAuthorization = require('./services/getAuthorization');
 
 let firestore;
