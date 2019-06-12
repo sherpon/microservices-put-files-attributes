@@ -55,7 +55,7 @@ HTTP Triggers    │ http://localhost:8010/sherpon-staging/us-central1/:function
 Deploying functions to the Node.js Emulator uses the same syntax as the gcloud command-line tool.
 To deploy the HTTP function to the Node.js Emulator:
 ```
-functions deploy postFiles \
+functions deploy putFilesAttributes \
   --trigger-http
 ```
 
@@ -77,7 +77,7 @@ MYSQL_DATABASE: sherpon
 ```
 
 ```
-gcloud functions deploy postFiles \
+gcloud functions deploy putFilesAttributes \
   --env-vars-file ./env/.env.staging.yaml \
   --runtime nodejs8 \
   --trigger-http
@@ -101,7 +101,7 @@ MYSQL_DATABASE: sherpon
 ```
 
 ```
-gcloud functions deploy postFiles \
+gcloud functions deploy putFilesAttributes \
   --env-vars-file ./env/.env.production.yaml \
   --runtime nodejs8 \
   --trigger-http
@@ -110,14 +110,14 @@ gcloud functions deploy postFiles \
 ## 2. Debugger
 Run the Function Emulator like localhost deploy. Then execute the follow line.
 ```
-functions deploy postFiles \
+functions deploy putFilesAttributes \
   --trigger-http \
   --timeout=50000
 ```
 
 If you want to inspect it, place the debugger on any line and execute the line below:
 ```
-functions inspect postFiles
+functions inspect putFilesAttributes
 ```
 
 For more information:
