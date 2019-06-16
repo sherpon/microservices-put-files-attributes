@@ -11,7 +11,6 @@ let firestore;
 const saveAttributesStep = async (req, res) => {
   try {
     const websiteId = req.query.websiteId;
-    const fileId = req.body.id;
     const type = req.body.type;
     const filename = req.body.filename;
     /* page's attributes */
@@ -27,7 +26,6 @@ const saveAttributesStep = async (req, res) => {
     await saveAttributes(
       firestore, 
       websiteId, 
-      /* fielId */ fileId,
       /* fileType */ type, 
       /* filename */ filename, 
       url, 
