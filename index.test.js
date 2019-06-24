@@ -58,7 +58,7 @@ describe('Test putFilesAttributes', () => {
     require('axios').__setMockResponse(mockResponse);
     let mocks = getMocks();
     mocks.req.headers.authorization = `Beare ${parameters.header.token}`;
-    mocks.req.method = 'POST';
+    mocks.req.method = 'PUT';
     mocks.req.body = parameters.body;
     mocks.req.query = parameters.query;
     await microservice.putFilesAttributes(mocks.req, mocks.res);
@@ -88,7 +88,7 @@ describe('Test putFilesAttributes', () => {
     require('axios').__setMockResponse(mockResponse);
     let mocks = getMocks();
     mocks.req.headers.authorization = `Beare ${parameters.header.token}`;
-    mocks.req.method = 'POST';
+    mocks.req.method = 'PUT';
     mocks.req.body = parameters.body;
     mocks.req.query = parameters.query;
     await microservice.putFilesAttributes(mocks.req, mocks.res);
